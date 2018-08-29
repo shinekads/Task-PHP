@@ -3,7 +3,15 @@
 class BankAccount implements IfaceBankAccount
 {
 
-    private $balance = null;
+    private $balance = 0;
+    
+    function getBalance() {
+        return $this->balance;
+    }
+
+    function setBalance($balance) {
+        $this->balance = $balance;
+    }
 
     public function __construct(Money $openingBalance)
     {
