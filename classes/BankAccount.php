@@ -17,7 +17,7 @@ class BankAccount implements IfaceBankAccount
 
     public function deposit(Money $amount)
     {
-        //implement this method
+         $this->balance = intval($this->balance->__toString() + $amount->__toString());
     }
 
     public function transfer(Money $amount, BankAccount $account)
